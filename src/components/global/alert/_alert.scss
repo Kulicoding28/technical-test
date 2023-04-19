@@ -1,0 +1,85 @@
+@import "../../../mixins";
+
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 999;
+
+  &.alert-overlay-open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .custom-alert {
+    width: 323px;
+    height: 18px;
+
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 13px;
+
+    @include desktop-screen {
+      width: 490px;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 150%;
+      text-align: center;
+      color: #111111;
+      margin: 0;
+    }
+
+    &.alert-open {
+      animation: alertSlideIn 0.5s forwards;
+    }
+
+    &.alert-hide {
+      animation: alertSlideOut 0.5s forwards;
+    }
+
+    @keyframes alertSlideIn {
+      from {
+        opacity: 0;
+        transform: translateY(0);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(100%);
+      }
+    }
+
+    @keyframes alertSlideOut {
+      from {
+        opacity: 1;
+        transform: translateY(100%);
+      }
+
+      to {
+        opacity: 0;
+        transform: translateY(0);
+      }
+    }
+  }
+}

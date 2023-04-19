@@ -1,4 +1,11 @@
 @import "./components/global/header/header";
+@import "./components/global/button/button";
+@import "./components/home-page/contents/contents";
+@import "./components/home-page/activity-card/activity-card";
+@import "./components/global/loading/loading";
+@import "./components/global/modal/modal";
+@import "./components/global/delete-modal/delete-modal";
+@import "./components/global/alert/alert";
 
 * {
   font-family: "Poppins", sans-serif;

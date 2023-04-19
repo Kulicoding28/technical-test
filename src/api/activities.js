@@ -62,8 +62,8 @@ export const updateActivityById = async ({ id, title }) => {
 
 export const deleteActivityById = async (id) => {
   try {
-    const res = await axios({
-      method: "get",
+    await axios({
+      method: "delete",
       url: `${BASE_URL}/activity-groups/${id}`,
     });
     return true;

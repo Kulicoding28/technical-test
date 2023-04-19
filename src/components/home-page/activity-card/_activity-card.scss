@@ -1,0 +1,63 @@
+@import "../../../mixins";
+
+.activity-card {
+  height: 150px;
+
+  background: #ffffff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 26px;
+  padding-right: 26px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include desktop-screen {
+    height: 234px;
+  }
+
+  &__body {
+    height: inherit;
+    cursor: pointer;
+
+    .activity-item-title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 27px;
+      color: #111111;
+      margin: 0;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    span {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: #888888;
+      margin: 0;
+    }
+
+    button {
+      border: none;
+      background: none;
+      padding: 0;
+      height: 24px;
+      cursor: pointer;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+}

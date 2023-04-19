@@ -1,0 +1,61 @@
+@import "../../../mixins";
+
+.delete-modal {
+  width: 300px;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 47px;
+  padding-bottom: 36px;
+  padding-left: 38px;
+  padding-right: 38px;
+
+  @include desktop-screen {
+    width: 490px;
+    padding-top: 50px;
+    padding-bottom: 43px;
+    padding-left: 62px;
+    padding-right: 62px;
+  }
+
+  img {
+    width: 46px;
+    height: 41px;
+    margin-bottom: 42px;
+
+    @include desktop-screen {
+      width: 84px;
+      height: 84px;
+    }
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    margin: 0 0 43px 0;
+
+    @include desktop-screen {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    .text-bold {
+      font-weight: 700;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
