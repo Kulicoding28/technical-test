@@ -91,7 +91,6 @@ export default function Contents() {
         <div className="section2">
           {data?.length ? <Sorter onChange={setSortValue} /> : null}
           <Button
-            dataCy="todo-add-button"
             data-cy="todo-add-button"
             onClick={() => setShowAddTodoModal(true)}
           >

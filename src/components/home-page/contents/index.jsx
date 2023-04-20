@@ -18,7 +18,7 @@ export default function Contents() {
       <div className="home-contents__header">
         <h1 data-cy="activity-title">Activity</h1>
         <Button
-          dataCy="activity-add-button"
+          data-cy="activity-add-button"
           className="button"
           onClick={createActivity}
         >
@@ -30,7 +30,7 @@ export default function Contents() {
         {isLoading ? (
           <Loading />
         ) : !data?.length ? (
-          <div className="empty-list">
+          <div className="empty-list" data-cy="activity-empty-state">
             <img
               data-cy="activity-empty-state"
               src={ActivityEmptyState}

@@ -59,7 +59,7 @@ export default function Sorter({ onChange }) {
         onClick={() => setIsOpen((prev) => !prev)}
         data-cy="todo-sort-button"
       >
-        <img src={ArrowSortIcon} alt="arrow-sort" data-cy="todo-sort-button" />
+        <img src={ArrowSortIcon} alt="arrow-sort" />
       </button>
 
       <ul

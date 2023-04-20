@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
-export default function Modal({ isOpen, children, dataCy }) {
+export default function Modal({ isOpen, children }) {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
@@ -17,10 +17,7 @@ export default function Modal({ isOpen, children, dataCy }) {
   if (!showModal) return null;
 
   return createPortal(
-    <div
-      data-cy={dataCy}
-      className={`modal-overlay ${isOpen ? "modal-overlay-open" : ""}`}
-    >
+    <div className={`modal-overlay ${isOpen ? "modal-overlay-open" : ""}`}>
       <div className={`custom-modal ${isOpen ? "modal-open" : "modal-hide"}`}>
         {children}
       </div>
