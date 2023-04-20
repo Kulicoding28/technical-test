@@ -27,7 +27,7 @@ export default function DeleteModal({
   }, [ref]);
 
   return (
-    <Modal dataCy="modal-delete" isOpen={isOpen}>
+    <Modal dataCy="modal-delete" isOpen={isOpen} data-cy="modal-delete">
       <div ref={ref} className="delete-modal">
         <img src={ModalDeleteIcon} alt="modal-delete-icon" />
         <p>
@@ -37,6 +37,7 @@ export default function DeleteModal({
         <div className="delete-modal__footer">
           <Button
             dataCy="modal-delete-cancel-button"
+            data-cy="modal-delete-cancel-button"
             textColor="#4A4A4A"
             backgroundColor="#F4F4F4"
             backgroundColorHover="#d9d9d9"
@@ -46,6 +47,7 @@ export default function DeleteModal({
           </Button>
           <Button
             dataCy="modal-delete-confirm-button"
+            data-cy="modal-delete-confirm-button"
             backgroundColor="#ED4C5C"
             backgroundColorHover="#a43944"
             onClick={onDelete}

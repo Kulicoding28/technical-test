@@ -92,6 +92,7 @@ export default function Contents() {
           {data?.length ? <Sorter onChange={setSortValue} /> : null}
           <Button
             dataCy="todo-add-button"
+            data-cy="todo-add-button"
             onClick={() => setShowAddTodoModal(true)}
           >
             <span className="plus-icon">+</span> Tambah

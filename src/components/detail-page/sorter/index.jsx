@@ -57,11 +57,13 @@ export default function Sorter({ onChange }) {
       <button
         className="sorter__button"
         onClick={() => setIsOpen((prev) => !prev)}
+        data-cy="todo-sort-button"
       >
         <img src={ArrowSortIcon} alt="arrow-sort" data-cy="todo-sort-button" />
       </button>
 
       <ul
+        data-cy="sort-selection"
         className={`sorter__options ${
           isOpen ? "options-open" : "options-hide"
         }`}
