@@ -1,0 +1,109 @@
+@import "../../../mixins";
+
+.add-todo-modal {
+  width: 320px;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+
+  @include desktop-screen {
+    width: 830px;
+    height: 403px;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: 60px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-left: 22px;
+    padding-right: 22px;
+
+    @include desktop-screen {
+      height: 70px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    h1 {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+      margin: 0;
+
+      @include desktop-screen {
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+
+    img {
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+
+      @include desktop-screen {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 38px;
+    padding-bottom: 23px;
+    padding-left: 22px;
+    padding-right: 22px;
+
+    @include desktop-screen {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #e5e5e5;
+
+    label {
+      margin-bottom: 9px;
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 15px;
+
+      @include desktop-screen {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    input {
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+      border-radius: 6px;
+      padding: 14px 18px;
+      margin-bottom: 26px;
+
+      &:focus {
+        outline: none;
+        border: 1px solid #16abf8;
+      }
+    }
+  }
+
+  &__footer {
+    height: 88px;
+    padding-left: 22px;
+    padding-right: 22px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include desktop-screen {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+}

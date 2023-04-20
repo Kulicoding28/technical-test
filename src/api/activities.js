@@ -47,7 +47,7 @@ export const getActivityById = async (id) => {
 export const updateActivityById = async ({ id, title }) => {
   try {
     const res = await axios({
-      method: "get",
+      method: "patch",
       url: `${BASE_URL}/activity-groups/${id}`,
       data: {
         title,

@@ -1,0 +1,107 @@
+@import "../../../mixins";
+
+.todo-card {
+  height: 56px;
+
+  background: #ffffff;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 28px;
+
+  @include desktop-screen {
+    height: 80px;
+  }
+
+  &__section1 {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    height: inherit;
+
+    .todo-checkbox {
+      border: none;
+      background: none;
+      padding: 0;
+      height: 20px;
+      margin-right: 9px;
+      cursor: pointer;
+
+      img {
+        width: 12px;
+        height: 12px;
+
+        @include desktop-screen {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .circle {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+
+      @include desktop-screen {
+        width: 9px;
+        height: 9px;
+      }
+    }
+
+    .todo-title {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      color: #111111;
+      margin: 0;
+      padding: 0;
+
+      @include desktop-screen {
+        font-size: 18px;
+        line-height: 27px;
+      }
+    }
+
+    .todo-edit-button {
+      border: none;
+      background: none;
+      padding: 0;
+      height: 20px;
+      cursor: pointer;
+
+      img {
+        width: 15px;
+        height: 15px;
+
+        @include desktop-screen {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  &__section2 {
+    .todo-delete-button {
+      border: none;
+      background: none;
+      padding: 0;
+      height: 20px;
+      cursor: pointer;
+
+      img {
+        width: 15px;
+        height: 15px;
+
+        @include desktop-screen {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

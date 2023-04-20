@@ -13,6 +13,6 @@ export { default as TodoItemChecked } from "./todo-item-checked.png";
 export { default as ArrowSortIcon } from "./arrow-sort.png";
 export { default as SortNewestIcon } from "./sort-newest.png";
 export { default as SortOldestIcon } from "./sort-oldest.png";
-// export { default as SortAZIcon } from "./sort-az.png";
+export { default as SortAZIcon } from "./sort-az.png";
 export { default as SortZAIcon } from "./sort-za.png";
 export { default as SortUnfinishedIcon } from "./sort-unfinished.png";

@@ -6,6 +6,10 @@
 @import "./components/global/modal/modal";
 @import "./components/global/delete-modal/delete-modal";
 @import "./components/global/alert/alert";
+@import "./components/detail-page/todo-card/_todo-card";
+@import "./components/detail-page/select-priority/select-priority";
+@import "./components/detail-page/add-todo-modal/add-todo-modal";
+@import "./components/detail-page/content/content";
 
 * {
   font-family: "Poppins", sans-serif;

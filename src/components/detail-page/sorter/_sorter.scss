@@ -1,0 +1,94 @@
+@import "../../../mixins";
+
+.sorter {
+  &__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    width: 54px;
+    height: 54px;
+
+    border: 1px solid #aeaeae;
+    border-radius: 45px;
+    cursor: pointer;
+
+    @include desktop-screen {
+      margin-right: 18px;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__options {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    outline: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0px 6px 15px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+    top: 170px;
+
+    @include desktop-screen {
+      font-size: 16px;
+      line-height: 24px;
+      top: 180px;
+    }
+
+    &.options-open {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-70%, 30px);
+    }
+
+    &.options-hide {
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(-70%, 0);
+    }
+
+    li {
+      padding: 19px 17px;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+      justify-self: center;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+
+      @include desktop-screen {
+        gap: 19px;
+      }
+
+      &:hover {
+        background: #e5e5e5;
+      }
+
+      img {
+        width: 14px;
+        height: 14px;
+
+        @include desktop-screen {
+          width: 17px;
+          height: 17px;
+        }
+      }
+    }
+  }
+}
