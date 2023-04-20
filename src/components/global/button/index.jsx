@@ -7,6 +7,7 @@ export default function Button({
   backgroundColorHover = "#1792cf",
   disabledColor = "#5ac4f9",
   onClick,
+  dataCy,
   disabled,
 }) {
   const [bgColor, setBgColor] = useState("");
@@ -31,6 +32,7 @@ export default function Button({
 
   return (
     <button
+      data-cy={dataCy}
       className="custom-button"
       style={{
         color: textColor,

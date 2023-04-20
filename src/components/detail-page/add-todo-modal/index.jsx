@@ -29,7 +29,7 @@ export default function AddTodoModal({
   }, [isEditMode, defaultValue?.title, defaultValue?.priority]);
 
   return (
-    <Modal isOpen={isOpen} data-cy="modal-add">
+    <Modal isOpen={isOpen} dataCy="modal-add" data-cy="modal-add">
       <div className="add-todo-modal">
         <div className="add-todo-modal__header">
           <h1>{isEditMode ? "Ubah" : "Tambah"} List Item</h1>
@@ -77,6 +77,7 @@ export default function AddTodoModal({
 
         <div className="add-todo-modal__footer">
           <Button
+            dataCy="modal-add-save-button"
             data-cy="modal-add-save-button"
             onClick={() => {
               onSubmit({ activity_group_id, ...values });

@@ -5,10 +5,7 @@ import { AppContext } from "../../../AppContext";
 import { BackButtonIcon, TodoEmptyState } from "../../../assets";
 import Button from "../../global/button";
 import DeleteModal from "../../global/delete-modal";
-import Loading from "../../global/loading";
-import AddTodoModal from "../add-todo-modal";
 import EdittableTitle from "../edittable-title";
-import Sorter from "../sorter";
 import TodoCard from "../todo-card";
 import useFetchInitialValues from "./hooks/useFetchInitialValues";
 
@@ -91,7 +88,7 @@ export default function Contents() {
         <div className="section2">
           {data?.length ? <Sorter onChange={setSortValue} /> : null}
           <Button
-            data-cy="todo-add-button"
+            dataCy="todo-add-button"
             onClick={() => setShowAddTodoModal(true)}
           >
             <span className="plus-icon">+</span> Tambah
